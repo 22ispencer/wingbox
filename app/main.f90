@@ -1,6 +1,13 @@
 program main
-  use wingbox, only: say_hello
-  implicit none
+   use geometry_rect, only: t_rect
+   implicit none
 
-  call say_hello()
+   type(t_rect) :: rect
+   real :: area
+   rect = t_rect(0, 0, 4, 4)
+
+   area = rect%amoi_yy()
+
+   print *, area
+
 end program main
